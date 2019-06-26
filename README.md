@@ -8,7 +8,7 @@ Your browser also creates **javascript objects** out of the HTML elements. This 
 
 The nested objects form a tree-like structure -- the DOM tree.
 
-![DOM Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
+![DOM Tree](https://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
 
 The HTML can be considered 'ingredients' from which the DOM is 'cooked'. We interact with the HTML structure by using the objects cooked-up by the browser.
 
