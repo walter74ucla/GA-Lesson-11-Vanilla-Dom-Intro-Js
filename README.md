@@ -165,10 +165,11 @@ for(let i = 0; i < theDivs.length; i++) {
 }
 ```
 
--  it just says "<h1>cheese</h1>" on the page.  that's no good.
+-  it just says `"<h1>cheese</h1>"` on the page.  that's no good.
 
 -  to set HTML inside of an element, use the .innerHTML property
-```
+
+```js
 for(let i = 0; i < theDivs.length; i++) {
   theDivs[i].innerHTML = "<h1>cheese</h1>"
 }
@@ -187,7 +188,7 @@ console.log(firstBigDiv.style);
 
 -  to change a CSS property, you can access it via it's property in camelCase
 
-```
+```js
 firstBigDiv.style.backgroundColor = "green"
 ```
 
