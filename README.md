@@ -50,3 +50,36 @@ Will give us all elements with class 'info'
 
 <br>
 <hr>
+
+## Common pattern: Save a DOM element to a variable
+
+In Chrome console
+
+**Select an element**
+
+When you select an element from the DOM, save it a variable for handy reference.
+
+```javascript
+const puppy = document.querySelector('#first-img');
+```
+
+Change the attribute `src`, which is **property** of the object:
+
+```javascript
+kitten.src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2018/03/12191542/Two-Newfoundland-puppies-running-outside-header.jpg"
+```
+**Create an element**
+
+Created elements will not show until they are **appended** to the DOM.
+
+* **create** an element first ...
+
+```javascript
+const elem = document.createElement('div');
+```
+
+* change a property (text within the element)
+
+```javascript
+elem.innerText = 'Let there be light'
+```
