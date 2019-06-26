@@ -197,9 +197,9 @@ firstBigDiv.style.backgroundColor = "green"
 - you can access any node from any other node using DOM traversal 
 
 ```js
-const img = document.querySelector('#second-img)
+const img = document.querySelector('#second-img')
 
-console.log("here's troi.parentNode:");
+console.log("here's img.parentNode:");
 console.log(img.parentNode);
 console.log(img.parentNode.parentNode);
 console.log(img.parentNode.parentNode.parentNode);
@@ -208,7 +208,7 @@ console.log(img.parentNode.parentNode.parentNode);
 - You can access siblings
 
 ```js
-const img = document.querySelector('#second-img)
+const img = document.querySelector('#second-img')
 
 console.log(img.previousSibling.previousSibling)
 console.log(img.nextSibling.nextSibling)
