@@ -40,6 +40,8 @@ In Chrome console:
 document.querySelector('#container');
 ```
 
+all the methods for elements are listed [here on mdn](https://developer.mozilla.org/en-US/docs/Web/API/Element)
+
 Will give us the element with id 'container'.
 
 ```javascript
@@ -47,6 +49,8 @@ document.querySelectorAll('.info');
 ```
 
 Will give us all elements with class 'info'
+
+What is returned is called a [node list](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) the methods are that you can perform on the list are in the link.
 
 <br>
 <hr>
@@ -122,4 +126,38 @@ Confirm that new div is **inside** container div (it is a sibling of the **secti
 
 <br>
 <hr>
+
+
+**We won't be using many commands**
+
+DOM commands fall into a few broad categories:
+
+* Search / retrieval of elements on the page
+* Creating new elements
+* Editing the DOM
+* Traversal (related to search) - navigating the DOM
+
+We will only need a small handful of these commands for now. Here is a sample:
+
+* **Search**
+  * document.querySelector()
+  * document.getElementById()
+  * document.getElementsByClassName()
+  * document.getElementsByName()
+
+* **Creation**
+  * document.createElement()
+  * node.style
+* **DOM editing**
+  * node.appendChild()
+  * node.removeChild()
+  * node.innerText
+  * node.setAttribute()
+  * node.innerHTML
+  * node.id
+  * node.classList
+* **Traversal**
+  * node.childNodes
+  * node.children
+  * node.firstChild
 
