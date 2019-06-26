@@ -32,3 +32,21 @@ Shows us all the objects within the body tag.
 There is a `<div>` that is a child of `<body>`.
 
 We cannot just grab `document.body.div`, but `document` contains a bunch of useful methods for accessing and manipulating the DOM.
+
+
+In Chrome console:
+
+```javascript
+document.querySelector('#container');
+```
+
+Will give us the element with id 'container'.
+
+```javascript
+document.querySelectorAll('.info');
+```
+
+Will give us all elements with class 'info'
+
+<br>
+<hr>
