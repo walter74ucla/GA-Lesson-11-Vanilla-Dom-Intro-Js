@@ -70,8 +70,30 @@ const puppy = document.querySelector('#first-img');
 Change the attribute `src`, which is **property** of the object:
 
 ```javascript
-kitten.src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2018/03/12191542/Two-Newfoundland-puppies-running-outside-header.jpg"
+puppy.src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2018/03/12191542/Two-Newfoundland-puppies-running-outside-header.jpg"
 ```
+
+#### Viewing and changing attributes 
+
+```javascript
+const puppy = document.querySelector('#first-img');
+```
+
+- access html attribute with `.getAttribute()`
+
+```js
+console.log( puppy.getAttribute('src') );
+```
+
+- You can also change them with the setAttribute method
+
+```js
+const newImgUrl = 'https://i.pinimg.com/originals/dc/e8/c7/dce8c797a6cee1985da55ba6cfcf0bb9.jpg'
+puppy.setAttribute('src', newImgUrl)
+
+```
+
+
 **Create an element**
 
 Created elements will not show until they are **appended** to the DOM.
@@ -79,20 +101,20 @@ Created elements will not show until they are **appended** to the DOM.
 * **create** an element first ...
 
 ```javascript
-const elem = document.createElement('div');
+const div = document.createElement('div');
 ```
 
 * change a property (text within the element)
 
 ```javascript
-elem.innerText = 'Let there be light'
+div.innerText = 'Let there be light'
 ```
 Still will not show up ...
 
 * then **append** it to the body of the page
 
 ```javascript
-document.body.appendChild(elem);
+document.body.appendChild(div);
 ```
 
 You can see in the **Elements** tab whether the element has appended:
@@ -127,6 +149,73 @@ Confirm that new div is **inside** container div (it is a sibling of the **secti
 <br>
 <hr>
 
+1.  change all the .big divs to have the text "cheese"
+
+```js
+const theDivs = document.querySelectorAll('.big');
+for(let i = 0; i < theDivs.length; i++) {
+  theDivs[i].textContent = "cheese"
+}
+```
+
+- look what happens when you try to add html to those elements
+```js
+for(let i = 0; i < theDivs.length; i++) {
+  theDivs[i].textContent = "<h1>cheese</h1>"
+}
+```
+
+-  it just says "<h1>cheese</h1>" on the page.  that's no good.
+
+-  to set HTML inside of an element, use the .innerHTML property
+```
+for(let i = 0; i < theDivs.length; i++) {
+  theDivs[i].innerHTML = "<h1>cheese</h1>"
+}
+
+```
+
+
+#### Changing CSS
+
+- every element's CSS lives in an object in that element's object called "Style"
+
+```js
+const firstBigDiv = document.querySelector('#direct-child-example div:first-child')
+console.log(firstBigDiv.style);
+```
+
+-  to change a CSS property, you can access it via it's property in camelCase
+
+```
+firstBigDiv.style.backgroundColor = "green"
+```
+
+
+#### Dom Traversal
+
+- you can access any node from any other node using DOM traversal 
+
+```js
+const img = document.querySelector('#second-img)
+
+console.log("here's troi.parentNode:");
+console.log(img.parentNode);
+console.log(img.parentNode.parentNode);
+console.log(img.parentNode.parentNode.parentNode);
+```
+
+- You can access siblings
+
+```js
+const img = document.querySelector('#second-img)
+
+console.log(img.previousSibling.previousSibling)
+console.log(img.nextSibling.nextSibling)
+console.log(img.img.nextElementSibling)
+```
+
+
 
 **We won't be using many commands**
 
@@ -160,4 +249,8 @@ We will only need a small handful of these commands for now. Here is a sample:
   * node.childNodes
   * node.children
   * node.firstChild
+  * node.previousElementSibling
+  * node.nextElementSibling
+  * node.nextSibling
+  * node.previousSibling
 
