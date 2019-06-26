@@ -106,4 +106,24 @@ someP.innerText = "What we have here is a p."
 document.body.appendChild(someP);
 ```
 
+**Prompts**
+
+&#x1F535; Get the element with id 'container', save it to a variable, and console.log it.
+
+![](https://i.imgur.com/0IvO1kd.png)
+
+&#x1F535; Create a div, saving it to a variable.
+
+&#x1F535; Give the div some text with `.innerText =`.
+
+**Append to previously retrieved element:**
+
+&#x1F535; Append the new div to the element with id 'container' -- we have already retrieved it, no need to retrieve it again. `.appendChild()`.
+
+Confirm that new div is **inside** container div (it is a sibling of the **section**s):
+
+![](https://i.imgur.com/5UwEaWD.png)
+
+<br>
+<hr>
 
