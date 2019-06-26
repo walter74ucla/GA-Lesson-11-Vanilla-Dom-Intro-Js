@@ -83,3 +83,27 @@ const elem = document.createElement('div');
 ```javascript
 elem.innerText = 'Let there be light'
 ```
+Still will not show up ...
+
+* then **append** it to the body of the page
+
+```javascript
+document.body.appendChild(elem);
+```
+
+You can see in the **Elements** tab whether the element has appended:
+
+![](https://i.imgur.com/2mJQ9Dl.png)
+
+
+**We can create any tag we want, such as a 'p'**
+
+```javascript
+const someP = document.createElement('p');
+
+someP.innerText = "What we have here is a p."
+
+document.body.appendChild(someP);
+```
+
+
